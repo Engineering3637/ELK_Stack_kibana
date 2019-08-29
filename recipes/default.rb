@@ -22,6 +22,12 @@ apt_repository 'kibana' do
 end
 
 package 'elasticsearch'
+
+template '/etc/elasticsearch/elasticsearch.yml' do
+  source 'elasticsearch.yml.erb'
+end
+
+
 service 'elasticsearch' do
   supports status: true, restart: true, reload: true
   action [:enable, :start]
@@ -33,6 +39,7 @@ service 'kibana' do
   action [:enable, :start]
 end
 
+<<<<<<< HEAD
 apt_update 'update_sources' do
   action :update
 end
@@ -74,4 +81,8 @@ end
 
 logstash_curator 'server' do
   action [:create]
+=======
+execute 'Start on boot' do
+  command 'sudo update-rc.d elasticsearch defaults 95 10'
+>>>>>>> 0b8f96b80738d230388a0224dcd0bfd6ebc13d26
 end
