@@ -34,6 +34,11 @@ service 'elasticsearch' do
 end
 
 package 'kibana'
+
+template '/etc/kibana/kibana.yml' do
+  source 'kibana.yml.erb'
+end
+
 service 'kibana' do
   supports status: true, restart: true, reload: true
   action [:enable, :start]
