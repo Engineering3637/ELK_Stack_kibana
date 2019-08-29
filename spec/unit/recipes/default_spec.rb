@@ -47,5 +47,13 @@ describe 'kibana::default' do
    it 'should add kibana to source list' do
       expect(chef_run).to add_apt_repository('kibana')
     end
+
+  it 'runs apt get update' do
+    expect(chef_run).to update_apt_update 'update_sources'
+  end
+
+  it 'should install logstash' do
+    expect(chef_run).to install_package 'logstash'
+  end
   end
 end
