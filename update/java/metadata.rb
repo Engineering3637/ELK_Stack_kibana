@@ -1,9 +1,9 @@
-name 'kibana'
+name 'java'
 maintainer 'The Authors'
 maintainer_email 'you@example.com'
 license 'All Rights Reserved'
-description 'Installs/Configures kibana'
-long_description 'Installs/Configures kibana'
+description 'Installs/Configures java'
+long_description 'Installs/Configures java'
 version '0.1.0'
 chef_version '>= 14.0'
 
@@ -11,10 +11,10 @@ chef_version '>= 14.0'
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
 # uploaded to a Supermarket.
 #
-# issues_url 'https://github.com/<insert_org_here>/kibana/issues'
+# issues_url 'https://github.com/<insert_org_here>/java/issues'
 
-# The `source_url` points to the development repository for this cookbook.
+# The `source_url` points to the development repository for this cookbook.  A
 # `View Source` link will be displayed on this cookbook's page when uploaded to
 # a Supermarket.
 #
-# source_url 'https://github.com/<insert_org_here>/kibana'
+# source_url 'https://github.com/<insert_org_here>/java'
